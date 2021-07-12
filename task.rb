@@ -27,3 +27,17 @@ if num1 == 20 || num2 == 20
 else
   puts num1 + num2    
 end
+
+# Написать скрипт,который будет принимать число и слово, если слово заканичается на "CS" - выводит
+# на экран цифру 2 в степени (длины введеного слова), если не заканчивается - выводит слово задом наперед.
+
+puts "введите число"
+num = gets.to_i
+puts "введите слово"
+word = gets.to_s
+
+if word[-3..-1].downcase.include? "cs"
+  puts 2**word.length 
+else
+  puts word.reverse     
+end
