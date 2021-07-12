@@ -41,3 +41,25 @@ if word[-3..-1].downcase.include? "cs"
 else
   puts word.reverse     
 end
+
+# Написать скрипт,который будет выводить массив покемонов(Спросит сколько добавить покемонов,указаное на
+# предидущем этапе число раз спросит имя и цвет каждого покемона,выведет в консоль массив содержащий хеши
+# покемонов в формате [{name:'Pikachu', color: 'Yellow'}])
+
+pokemons = []
+count = 1 
+puts "Введите количество покемонов"
+input = gets.to_i
+
+while count <= input do
+  puts "Введите имя покемона" 
+  names = gets.to_s
+  puts "Введите цвет покемона" 
+  colors = gets.to_s
+  pokemon = {"name" => names ,"color" => colors}
+  pokemons.push(pokemon)
+  count +=1
+end
+
+puts pokemons.to_s
+
