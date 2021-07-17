@@ -27,3 +27,39 @@ if num1 == 20 || num2 == 20
 else
   puts num1 + num2    
 end
+
+# Написать скрипт,который будет принимать число и слово, если слово заканичается на "CS" - выводит
+# на экран цифру 2 в степени (длины введеного слова), если не заканчивается - выводит слово задом наперед.
+
+puts "введите число"
+num = gets.to_i
+puts "введите слово"
+word = gets.to_s
+
+if word[-3..-1].downcase.include? "cs"
+  puts 2**word.length 
+else
+  puts word.reverse     
+end
+
+# Написать скрипт,который будет выводить массив покемонов(Спросит сколько добавить покемонов,указаное на
+# предидущем этапе число раз спросит имя и цвет каждого покемона,выведет в консоль массив содержащий хеши
+# покемонов в формате [{name:'Pikachu', color: 'Yellow'}])
+
+pokemons = []
+count = 1 
+puts "Введите количество покемонов"
+input = gets.to_i
+
+while count <= input do
+  puts "Введите имя покемона" 
+  names = gets.to_s
+  puts "Введите цвет покемона" 
+  colors = gets.to_s
+  pokemon = {"name" => names ,"color" => colors}
+  pokemons.push(pokemon)
+  count +=1
+end
+
+puts pokemons.to_s
+
