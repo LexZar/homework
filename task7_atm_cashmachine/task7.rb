@@ -6,19 +6,21 @@
 
 require "./CashMachine"
 
-loop do
-    bancomat = CashMachine.new
-    input = gets.downcase.chomp
+# loop do
+#     bancomat = CashMachine.new
+#     input = gets.downcase.chomp
 
-    if input === "d"
-      bancomat.deposit
-    elsif  input === "w"
-      bancomat.withdraw   
-    elsif input ==="b" 
-      bancomat.balance
-    elsif input === "q" 
-      break
-    else
-      puts "Только D W B Q"  
-    end   
-end
+#     if input === "d"
+#       bancomat.deposit
+#     elsif  input === "w"
+#       bancomat.withdraw   
+#     elsif input ==="b" 
+#       bancomat.balance
+#     elsif input === "q" 
+#       break
+#     else
+#       puts "Только D W B Q"  
+#     end   
+# end
+bancomat = CashMachine.new
+bancomat.init
