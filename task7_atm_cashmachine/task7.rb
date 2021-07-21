@@ -11,14 +11,14 @@ loop do
     input = gets.downcase.chomp
 
     if input === "d"
-        bancomat.deposit
+      bancomat.deposit
     elsif  input === "w"
-        bancomat.withdraw   
+      bancomat.withdraw   
     elsif input ==="b" 
-        bancomat.balance
+      bancomat.balance
     elsif input === "q" 
-        break
+      break
     else
-        puts "Только D W B Q"  
+      puts "Только D W B Q"  
     end   
 end
